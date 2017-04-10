@@ -38,7 +38,7 @@ app.controller('SupplierController', function($scope, $http, API_URL) {
             url += "/" + id;
         }
         $scope.form.image = $scope.files[0]
-        console.log($scope.form.image);
+
 
 
         $http({
@@ -47,10 +47,10 @@ app.controller('SupplierController', function($scope, $http, API_URL) {
             data: $scope.form,
             headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         }).success(function(response){
-            console.log(response);
+
             location.reload();
         }).error(function(response){
-            console.log(response);
+
             // alert('This is embarassing. An error has occured. Please check the log for details');
         });
     }
@@ -76,7 +76,7 @@ app.controller('SupplierController', function($scope, $http, API_URL) {
                 method: 'DELETE',
                 url: API_URL + 'supplier/' + id
             }).success(function(data){
-                console.log(data);
+
                 location.reload();
             }).error(function(data){
                 console.log(data);
